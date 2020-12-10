@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="checkbox"][id^="cb"] {
+  display: none;
+}
+/* div input {
+    position: absolute;
+    top: 134px;
+} */
+div.tooltip.fade.top.in{
+    top: 116px !important;
+    left: 11.5px !important;
+    display: block;
+}
+.cont{
+    display: inline-block;
+}
+/* .cont {
+    margin-bottom: 29px;
+} */
+label {
+  border: 1px solid #fff;
+  padding: 10px;
+  display: block;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+label::before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+label img {
+  height: 100px;
+  width: 100px;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+:checked+label {
+  border-color: #ddd;
+}
+
+:checked+label::before {
+  content: "✓";
+  background-color: grey;
+  transform: scale(1);
+}
+
+:checked+label img {
+  transform: scale(0.9);
+  box-shadow: 0 0 5px #333;
+  z-index: -1;
+}
+.tooltip{
+    position: absolute;
+}
+
+    </style>
+</head>
+<body>
+    <form action="ok.php" method="GET">
+        <div class="cont">
+            <input type="checkbox" name="1" id="a1" /> 
+            <label for="a1">
+               <img src="ikony/1.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> 7 stref twardości</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="3" id="a3" /> 
+            <label for="a3">
+               <img src="ikony/3.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Materac Miękki</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="4" id="a4" /> 
+            <label for="a4">
+               <img src="ikony/4.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Materac Średni</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="5" id="a5" /> 
+            <label for="a5">
+               <img src="ikony/5.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Materac Twardy</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="6" id="a6" /> 
+            <label for="a6">
+               <img src="ikony/6.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Sprężyny kieszeniowe</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="7" id="a7" /> 
+            <label for="a7">
+               <img src="ikony/7.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Kokos</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="8" id="a8" /> 
+            <label for="a8">
+               <img src="ikony/8.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="9" id="a9" /> 
+            <label for="a9">
+               <img src="ikony/9.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="10" id="a10" /> 
+            <label for="a10">
+               <img src="ikony/10.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Możliwość prania w pralce w temp. do 60˚C</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="11" id="a11" /> 
+            <label for="a11">
+               <img src="ikony/11.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> 2 lat gwarancji</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="12" id="a12" /> 
+            <label for="a12">
+               <img src="ikony/12.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="13" id="a13" /> 
+            <label for="a13">
+               <img src="ikony/13.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="14" id="a14" /> 
+            <label for="a14">
+               <img src="ikony/14.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="15" id="a15" /> 
+            <label for="a15">
+               <img src="ikony/15.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner">Możliwość prania w pralce w temp. do 40˚C</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="16" id="a16" /> 
+            <label for="a16">
+               <img src="ikony/16.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Możliwość prania w pralce w temp. do 60˚C</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="17" id="a17" /> 
+            <label for="a17">
+               <img src="ikony/17.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> 90% puch gęsi</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="18" id="a18" /> 
+            <label for="a18">
+               <img src="ikony/18.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Extreme ECO clean</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="19" id="a19" /> 
+            <label for="a19">
+               <img src="ikony/19.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Dobry wybór</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="20" id="a20" /> 
+            <label for="a20">
+               <img src="ikony/20.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Odwracalny</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="21" id="a21" /> 
+            <label for="a21">
+               <img src="ikony/21.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Materac odwracalny</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="22" id="a22" /> 
+            <label for="a22">
+               <img src="ikony/22.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> materac odporny na temperature</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="23" id="a23" /> 
+            <label for="a23">
+               <img src="ikony/23.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> materac z przeszyciem</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="24" id="a24" /> 
+            <label for="a24">
+               <img src="ikony/24.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> materac sprężynowy</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="25" id="a25" /> 
+            <label for="a25">
+               <img src="ikony/25.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Pozytywna opinia Instytutu Matki i Dziecka</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="26" id="a26" /> 
+            <label for="a26">
+               <img src="ikony/26.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> 10 lat gwarancji</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="27" id="a27" /> 
+            <label for="a27">
+               <img src="ikony/27.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Antybakteryjny</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="28" id="a28" /> 
+            <label for="a28">
+               <img src="ikony/28.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> 5 stref twardości</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="29" id="a29" /> 
+            <label for="a29">
+               <img src="ikony/29.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="30" id="a30" /> 
+            <label for="a30">
+               <img src="ikony/30.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="31" id="a31" /> 
+            <label for="a31">
+               <img src="ikony/31.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Masujące wypustki</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="32" id="a32" /> 
+            <label for="a32">
+               <img src="ikony/32.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="33" id="a33" /> 
+            <label for="a33">
+               <img src="ikony/33.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="34" id="a34" /> 
+            <label for="a34">
+               <img src="ikony/34.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> 70% puch gęsi</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="35" id="a35" /> 
+            <label for="a35">
+               <img src="ikony/35.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Włokno Sensifil</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="36" id="a36" /> 
+            <label for="a36">
+               <img src="ikony/36.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Możliwość prania do 95°C</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="37" id="a37" /> 
+            <label for="a37">
+               <img src="ikony/37.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Włókno AMZ dreamfill</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="38" id="a38" /> 
+            <label for="a38">
+               <img src="ikony/38.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Włókno Advansa</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="39" id="a39" /> 
+            <label for="a39">
+               <img src="ikony/39.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Włókno Outlast</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="40" id="a40" /> 
+            <label for="a40">
+               <img src="ikony/40.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> pierza</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="41" id="a41" /> 
+            <label for="a41">
+               <img src="ikony/41.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> pierza / puch</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="42" id="a42" /> 
+            <label for="a42">
+               <img src="ikony/42.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> 5 lat gwarancji</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="43" id="a43" /> 
+            <label for="a43">
+               <img src="ikony/43.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> 7 stref twardości</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="44" id="a44" /> 
+            <label for="a44">
+               <img src="ikony/44.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> 15 lat gwarancji</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="45" id="a45" /> 
+            <label for="a45">
+               <img src="ikony/45.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Antyalergiczny</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="46" id="a46" /> 
+            <label for="a46">
+               <img src="ikony/46.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Dwie twardości</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="47" id="a47" /> 
+            <label for="a47">
+               <img src="ikony/47.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Materac</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="48" id="a48" /> 
+            <label for="a48">
+               <img src="ikony/48.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Kokos</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="49" id="a49" /> 
+            <label for="a49">
+               <img src="ikony/49.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Lateks</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="50" id="a50" /> 
+            <label for="a50">
+               <img src="ikony/50.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Materac elastyczny</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="51" id="a51" /> 
+            <label for="a51">
+               <img src="ikony/51.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Materac odwracalny</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="52" id="a52" /> 
+            <label for="a52">
+               <img src="ikony/52.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Pianka Flexifoam</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="53" id="a53" /> 
+            <label for="a53">
+               <img src="ikony/53.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Pianka termoelastyczna</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="54" id="a54" /> 
+            <label for="a54">
+               <img src="ikony/54.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Pianka wysokoelastyczna</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="55" id="a55" /> 
+            <label for="a55">
+               <img src="ikony/55.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Pianka wysokoelastyczna</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="56" id="a56" /> 
+            <label for="a56">
+               <img src="ikony/56.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Możliwość prania do 30°C</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="57" id="a57" /> 
+            <label for="a57">
+               <img src="ikony/57.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Możliwość prania do 60°C</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="58" id="a58" /> 
+            <label for="a58">
+               <img src="ikony/58.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Zizal</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="59" id="a59" /> 
+            <label for="a59">
+               <img src="ikony/59.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Materac sprężynowy</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="60" id="a60" /> 
+            <label for="a60">
+               <img src="ikony/60.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Uchwyt</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="61" id="a61" /> 
+            <label for="a61">
+               <img src="ikony/61.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Włókno labirynth</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="62" id="a62" /> 
+            <label for="a62">
+               <img src="ikony/62.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Wentylacja</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="63" id="a63" /> 
+            <label for="a63">
+               <img src="ikony/63.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Zamek rodzielczy</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="64" id="a64" /> 
+            <label for="a64">
+               <img src="ikony/64.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Sprężyny Multipocket</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="65" id="a65" /> 
+            <label for="a65">
+               <img src="ikony/65.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> 3 lata gwarancji</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="66" id="a66" /> 
+            <label for="a66">
+               <img src="ikony/66.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> 7 lat gwarancji</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="67" id="a67" /> 
+            <label for="a67">
+               <img src="ikony/67.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> 3 strefy twardości</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="68" id="a68" /> 
+            <label for="a68">
+               <img src="ikony/68.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> bardzo twardy</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="69" id="a69" /> 
+            <label for="a69">
+               <img src="ikony/69.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Materac</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="70" id="a70" /> 
+            <label for="a70">
+               <img src="ikony/70.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Materac</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="71" id="a71" /> 
+            <label for="a71">
+               <img src="ikony/71.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Materac</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="72" id="a72" /> 
+            <label for="a72">
+               <img src="ikony/72.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Wyrób medyczny</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="73" id="a73" /> 
+            <label for="a73">
+               <img src="ikony/73.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Materac</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="74" id="a74" /> 
+            <label for="a74">
+               <img src="ikony/74.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Materac ogrzewany</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="75" id="a75" /> 
+            <label for="a75">
+               <img src="ikony/75.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Materac sprężynowy</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="76" id="a76" /> 
+            <label for="a76">
+               <img src="ikony/76.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Materac o 4 twardościach</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="77" id="a77" /> 
+            <label for="a77">
+               <img src="ikony/77.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> 100% puch gęsi</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="78" id="a78" /> 
+            <label for="a78">
+               <img src="ikony/78.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Materac</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="79" id="a79" /> 
+            <label for="a79">
+               <img src="ikony/79.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> 45% puch gęsi</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="80" id="a80" /> 
+            <label for="a80">
+               <img src="ikony/80.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Włókno HSC silikonowane</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="81" id="a81" /> 
+            <label for="a81">
+               <img src="ikony/81.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Włokno HSC kulkowane silikonowane</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="82" id="a82" /> 
+            <label for="a82">
+               <img src="ikony/82.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Włokno kulkowane silikonowane</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="83" id="a83" /> 
+            <label for="a83">
+               <img src="ikony/83.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Włokno poliestrowane silikonowane</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="84" id="a84" /> 
+            <label for="a84">
+               <img src="ikony/84.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> 6 lat gwarancji</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="85" id="a85" /> 
+            <label for="a85">
+               <img src="ikony/85.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> 12 lat gwarancji</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="86" id="a86" /> 
+            <label for="a86">
+               <img src="ikony/86.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Avent 02</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="87" id="a87" /> 
+            <label for="a87">
+               <img src="ikony/87.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Fly-dry</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="88" id="a88" /> 
+            <label for="a88">
+               <img src="ikony/88.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Materac 36.6°C</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="89" id="a89" /> 
+            <label for="a89">
+               <img src="ikony/89.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Materac zwalcza drobnoustroje</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="90" id="a90" /> 
+            <label for="a90">
+               <img src="ikony/90.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="91" id="a91" /> 
+            <label for="a91">
+               <img src="ikony/91.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="92" id="a92" /> 
+            <label for="a92">
+               <img src="ikony/92.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="93" id="a93" /> 
+            <label for="a93">
+               <img src="ikony/93.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="94" id="a94" /> 
+            <label for="a94">
+               <img src="ikony/94.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="95" id="a95" /> 
+            <label for="a95">
+               <img src="ikony/95.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="96" id="a96" /> 
+            <label for="a96">
+               <img src="ikony/96.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Pianka nightfly</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="97" id="a97" /> 
+            <label for="a97">
+               <img src="ikony/97.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Materac 36.6°C</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="98" id="a98" /> 
+            <label for="a98">
+               <img src="ikony/98.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Włkuna Innogel</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="99" id="a99" /> 
+            <label for="a99">
+               <img src="ikony/99.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner">Pianka Biogreen</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="100" id="a100" /> 
+            <label for="a100">
+               <img src="ikony/100.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Materac typu Partner</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="101" id="a101" /> 
+            <label for="a101">
+               <img src="ikony/101.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="102" id="a102" /> 
+            <label for="a102">
+               <img src="ikony/102.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="103" id="a103" /> 
+            <label for="a103">
+               <img src="ikony/103.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="104" id="a104" /> 
+            <label for="a104">
+               <img src="ikony/104.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="105" id="a105" /> 
+            <label for="a105">
+               <img src="ikony/105.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="106" id="a106" /> 
+            <label for="a106">
+               <img src="ikony/106.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="107" id="a107" /> 
+            <label for="a107">
+               <img src="ikony/107.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="108" id="a108" /> 
+            <label for="a108">
+               <img src="ikony/108.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="109" id="a109" /> 
+            <label for="a109">
+               <img src="ikony/109.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="110" id="a110" /> 
+            <label for="a110">
+               <img src="ikony/110.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="111" id="a111" /> 
+            <label for="a111">
+               <img src="ikony/111.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="112" id="a112" /> 
+            <label for="a112">
+               <img src="ikony/112.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Poduszka ergonomiczna</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="113" id="a113" /> 
+            <label for="a113">
+               <img src="ikony/113.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Włokan węglowe</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="114" id="a114" /> 
+            <label for="a114">
+               <img src="ikony/114.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> 20 lat gwarancji</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="115" id="a115" /> 
+            <label for="a115">
+               <img src="ikony/115.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Certyfikat Szwajcarskiego Instytutu AEH</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="116" id="a116" /> 
+            <label for="a116">
+               <img src="ikony/116.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="117" id="a117" /> 
+            <label for="a117">
+               <img src="ikony/117.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="118" id="a118" /> 
+            <label for="a118">
+               <img src="ikony/118.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="119" id="a119" /> 
+            <label for="a119">
+               <img src="ikony/119.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="120" id="a120" /> 
+            <label for="a120">
+               <img src="ikony/120.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="121" id="a121" /> 
+            <label for="a121">
+               <img src="ikony/121.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="122" id="a122" /> 
+            <label for="a122">
+               <img src="ikony/122.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="123" id="a123" /> 
+            <label for="a123">
+               <img src="ikony/123.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> 4 lata gwarancji</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="124" id="a124" /> 
+            <label for="a124">
+               <img src="ikony/124.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> 12 stref twardości</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="125" id="a125" /> 
+            <label for="a125">
+               <img src="ikony/125.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="126" id="a126" /> 
+            <label for="a126">
+               <img src="ikony/126.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="127" id="a127" /> 
+            <label for="a127">
+               <img src="ikony/127.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Hybrid</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="128" id="a128" /> 
+            <label for="a128">
+               <img src="ikony/128.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Neropur</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="129" id="a129" /> 
+            <label for="a129">
+               <img src="ikony/129.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Ultra</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="130" id="a130" /> 
+            <label for="a130">
+               <img src="ikony/130.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Viscoool</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="131" id="a131" /> 
+            <label for="a131">
+               <img src="ikony/131.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="132" id="a132" /> 
+            <label for="a132">
+               <img src="ikony/132.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Materac o 6 twardościach</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="133" id="a133" /> 
+            <label for="a133">
+               <img src="ikony/133.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Materac z odpinanym topem</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="134" id="a134" /> 
+            <label for="a134">
+               <img src="ikony/134.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="135" id="a135" /> 
+            <label for="a135">
+               <img src="ikony/135.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="136" id="a136" /> 
+            <label for="a136">
+               <img src="ikony/136.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Dla dzieci</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="137" id="a137" /> 
+            <label for="a137">
+               <img src="ikony/137.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Dla osób z bólem kręgosłupa</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="138" id="a138" /> 
+            <label for="a138">
+               <img src="ikony/138.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> -</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="139" id="a139" /> 
+            <label for="a139">
+               <img src="ikony/139.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Dla seniorów</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="140" id="a140" /> 
+            <label for="a140">
+               <img src="ikony/140.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Bez przenoszenia ruchu</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="141" id="a141" /> 
+            <label for="a141">
+               <img src="ikony/141.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> 4 komforty</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="142" id="a142" /> 
+            <label for="a142">
+               <img src="ikony/142.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Wygodne opakowanie</div>
+               </div>
+            </label>
+         </div>
+         <div class="cont">
+            <input type="checkbox" name="143" id="a143" /> 
+            <label for="a143">
+               <img src="ikony/143.png" />
+               <div class="tooltip fade top in" style="top: -10px; left: -1.5px; display: block;" tooltip="" fade="" top="">
+                  <div class="tooltip-arrow"></div>
+                  <div class="tooltip-inner"> Pokrowiec lato/zima</div>
+               </div>
+            </label>
+         </div>
+        <input type=submit value="Wyślij"/>
+    </form>
+</body>
+</html>
+
